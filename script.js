@@ -65,40 +65,8 @@ keys.addEventListener("click", (e) => {
       default:
          inputNumber(value)
          break;
-      }
-      updateDisplay()
-
-   //* switch case yapısından önce bu şekildeydi
-   /*   if (element.classList.contains("del")) {
-        let val = displayValue.slice(0, -1)
-        if (!val) { val = "0" }
-        displayValue = val
-        isWaitingNewValue = false
-        updateDisplay()
-        return
-     } */
-
-   /* if (element.classList.contains("clear")) {
-      displayValue = "0"
-      firstValue = null
-      operator = null
-      updateDisplay()
-      return
-   } */
-   /* 
-      if (element.classList.contains("decimal")) {
-         displayValue = displayValue.includes(".") ? displayValue : displayValue + "."
-         updateDisplay()
-         return
-      } */
-   /*  if (element.classList.contains("operator")) {
-       handleOperator(value)
-       updateDisplay()
-       return
-    } */
-   /* 
-      inputNumber(value)
-      updateDisplay() */
+   }
+   updateDisplay()
 
 })
 
@@ -162,3 +130,36 @@ const inputNumber = (num) => {
 
 
 }
+
+
+//* switch case yapısından önce bu şekildeydi
+/*   if (element.classList.contains("del")) {
+     let val = displayValue.slice(0, -1)
+     if (!val) { val = "0" }
+     displayValue = val
+     isWaitingNewValue = false
+     updateDisplay()
+     return
+  } */
+
+/* if (element.classList.contains("clear")) {
+   displayValue = "0"
+   firstValue = null
+   operator = null
+   updateDisplay()
+   return
+} */
+/*
+   if (element.classList.contains("decimal")) {
+      displayValue = displayValue.includes(".") ? displayValue : displayValue + "."
+      updateDisplay()
+      return
+   } */
+/*  if (element.classList.contains("operator")) {
+    handleOperator(value)
+    updateDisplay()
+    return
+ } */
+/*
+   inputNumber(value)
+   updateDisplay() */
