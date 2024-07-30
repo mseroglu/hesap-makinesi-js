@@ -2,5 +2,6 @@
 
 ### Review
 ![gif file](./hesap-makinesi.gif)
+![image](./hs.png)
 
 
