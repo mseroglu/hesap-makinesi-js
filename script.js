@@ -40,45 +40,69 @@ keys.addEventListener("click", (e) => {
 
    if (!element.matches("button")) return
 
-   switch (element) {
-      case value:
-
+   switch (value) {
+      case "del":
+         let val = displayValue.slice(0, -1)
+         if (!val) { val = "0" }
+         displayValue = val
+         isWaitingNewValue = false
+         updateDisplay()
          break;
-
+      case "clear":
+         displayValue = "0"
+         firstValue = null
+         operator = null
+         updateDisplay()
+         break
+      case ".":
+         displayValue = displayValue.includes(".") ? displayValue : displayValue + "."
+         updateDisplay()
+         break
+      case "+":
+      case "-":
+      case "*":
+      case "/":
+      case "=":
+         handleOperator(value)
+         updateDisplay()
+         break;
       default:
+         inputNumber(value)
+         updateDisplay()
          break;
    }
 
+   //* switch case yapısından önce bu şekildeydi
+   /*   if (element.classList.contains("del")) {
+        let val = displayValue.slice(0, -1)
+        if (!val) { val = "0" }
+        displayValue = val
+        isWaitingNewValue = false
+        updateDisplay()
+        return
+     } */
 
-   if (element.classList.contains("del")) {
-      let val = displayValue.slice(0, -1)
-      if (!val) { val = "0" }
-      displayValue = val
-      isWaitingNewValue = false
-      updateDisplay()
-      return
-   }
-
-   if (element.classList.contains("clear")) {
+   /* if (element.classList.contains("clear")) {
       displayValue = "0"
       firstValue = null
       operator = null
       updateDisplay()
       return
-   }
-   if (element.classList.contains("decimal")) {
-      displayValue = displayValue.includes(".") ? displayValue : displayValue + "."
-      updateDisplay()
-      return
-   }
-   if (element.classList.contains("operator")) {
-      handleOperator(value)
-      updateDisplay()
-      return
-   }
-
-   inputNumber(value)
-   updateDisplay()
+   } */
+   /* 
+      if (element.classList.contains("decimal")) {
+         displayValue = displayValue.includes(".") ? displayValue : displayValue + "."
+         updateDisplay()
+         return
+      } */
+   /*  if (element.classList.contains("operator")) {
+       handleOperator(value)
+       updateDisplay()
+       return
+    } */
+   /* 
+      inputNumber(value)
+      updateDisplay() */
 
 })
 
