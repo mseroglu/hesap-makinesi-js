@@ -1,0 +1,124 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 10px;
+}
+
+body {
+   font-size: 1.2rem;
+}
+
+.calculator {
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   width: 400px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 2rem;
+}
+
+.calc-input {
+   width: 100%;
+   font-size: 4rem;
+   height: 7rem;
+   border: none;
+   background-color: #252525;
+   color: white;
+   text-align: right;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   border-radius: .5rem;
+}
+
+button {
+   height: 5rem;
+   background-color: #fff;
+   border-radius: 3px;
+   border: 1px solid #c4c4c4;
+   background-color: transparent;
+   font-size: 2.5rem;
+   color: #333;
+}
+
+button:hover {
+   background-color: #eaeaea;
+}
+
+.calc-keys {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1rem;
+   margin-top: 2rem;
+}
+
+.operator {
+   color: #337cac;
+}
+
+.clear {
+   background-color: #f0595f;
+   border-color: #b0353a;
+   color: #fff;
+}
+
+.clear:hover {
+   background-color: #f17377;
+}
+
+.equal-sign {
+   background-color: #2e86c0;
+   border-color: #337cac;
+   color: #fff;
+   grid-area: 2/4/5/4;
+   height: 100%;
+}
+
+.equal-sign:hover {
+   background-color: #337cac;
+}
+
+.del {
+   background-color: rgb(60, 180, 60);
+   color: white;
+}
+.del:hover {
+   background-color: rgb(70, 160, 70);
+}
+.display-area{
+   display: flex;
+}
+.islem{
+   background-color: #252525;
+   color: #fff;
+   font-size: 12px;
+   font-weight: 600;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   gap: 5px;   
+   border-radius: 5px;
+   padding: 0 5px 4px;
+   margin-left: -10px;
+   position: relative;
+  
+}
+.islem span{
+   border: gray 1px solid;
+   width: 12px;
+   height: 12px;
+   display: grid;
+   place-content: center;
+   border-radius: 3px;
+   color: gray;
+}
+.islem span.active{
+   color: white;
+   border-bottom: white;
+   scale: 1.5;
+}
