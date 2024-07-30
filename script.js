@@ -46,17 +46,14 @@ keys.addEventListener("click", (e) => {
          if (!val) { val = "0" }
          displayValue = val
          isWaitingNewValue = false
-         updateDisplay()
          break;
       case "clear":
          displayValue = "0"
          firstValue = null
          operator = null
-         updateDisplay()
          break
       case ".":
          displayValue = displayValue.includes(".") ? displayValue : displayValue + "."
-         updateDisplay()
          break
       case "+":
       case "-":
@@ -64,13 +61,12 @@ keys.addEventListener("click", (e) => {
       case "/":
       case "=":
          handleOperator(value)
-         updateDisplay()
          break;
       default:
          inputNumber(value)
-         updateDisplay()
          break;
-   }
+      }
+      updateDisplay()
 
    //* switch case yapısından önce bu şekildeydi
    /*   if (element.classList.contains("del")) {
